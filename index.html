@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo" onclick="switchView('home-view')">
+        GUSTO<span>.</span>
+      </div>
+
+      <nav class="nav-links">
+        <span class="nav-link" onclick="switchView('home-view')">Home</span>
+        <span class="nav-link" onclick="switchView('about-view')">About</span>
+        <span class="nav-link" onclick="switchView('contact-view')"
+          >Contact</span
+        >
+      </nav>
+
+      <!-- Search Bar Restored -->
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="Search for food..."
+          onkeyup="handleSearch()"
+        />
+      </div>
+
+      <div class="nav-actions">
+        <div class="action-icon" onclick="switchView('auth-view')">
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="action-icon" onclick="toggleCart(true)">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge" id="cartBadge">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 1. HOME VIEW -->
+    <section id="home-view" class="view-section active">
+      <h2 style="margin-bottom: 2rem; font-size: 2rem">Discover Delicious</h2>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <!-- 2. ABOUT VIEW -->
+    <section id="about-view" class="view-section">
+      <div class="content-container">
+        <h1>Our Culinary Journey</h1>
+        <p>
+          At Gusto, we believe that great food starts with honest ingredients.
+          Founded in 2025, our mission has been to bridge the gap between
+          chef-quality dining and the convenience of home delivery.
+        </p>
+        <p style="margin-top: 1rem">
+          Every dish is prepared fresh to order, ensuring that you receive the
+          highest quality meal every single time. We partner with local farmers
+          and sustainable suppliers because we care about our community and our
+          planet.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. CONTACT VIEW -->
+    <section id="contact-view" class="view-section">
+      <div class="content-container">
+        <h1>Get In Touch</h1>
+        <p style="margin-bottom: 2rem">
+          Have a question about your order or just want to say hi? We're here to
+          help!
+        </p>
+        <div class="auth-card" style="margin: 0; max-width: 100%">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" />
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+          </div>
+          <button class="primary-btn" onclick="alert('Message Sent!')">
+            Send Message
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. AUTH VIEW (Login/Signup) -->
+    <section id="auth-view" class="view-section">
+      <div class="auth-card">
+        <h2 id="authTitle" style="margin-bottom: 1.5rem; text-align: center">
+          Welcome Back
+        </h2>
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" />
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" />
+        </div>
+        <button class="primary-btn" onclick="handleAuth()">Continue</button>
+        <p
+          style="
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #666;
+          "
+          id="authToggle"
+          onclick="toggleAuth()"
+        >
+          Don't have an account? Sign Up
+        </p>
+      </div>
+    </section>
+
+    <!-- CART SIDEBAR -->
+    <div class="overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+      <h3>Your Selection</h3>
+      <div style="flex: 1; margin: 1rem 0; overflow-y: auto" id="cartList">
+        <p style="color: #888">Your cart is empty.</p>
+      </div>
+      <div
+        style="
+          font-size: 1.2rem;
+          font-weight: 800;
+          border-top: 2px solid #eee;
+          padding-top: 1rem;
+        "
+      >
+        <div style="display: flex; justify-content: space-between">
+          <span>Total:</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+      </div>
+      <button
+        class="primary-btn"
+        style="margin-top: 1rem"
+        onclick="alert('Redirecting to checkout...')"
+      >
+        Checkout
+      </button>
+      <button
+        style="
+          background: none;
+          border: none;
+          margin-top: 10px;
+          cursor: pointer;
+          color: #888;
+        "
+        onclick="toggleCart(false)"
+      >
+        Close
+      </button>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Gusto Eatery. Built with Passion.</p>
+    </footer>
+  </body>
+</html>
