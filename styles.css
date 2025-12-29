@@ -1,0 +1,89 @@
+:root {
+  --primary: #e63946;
+  --dark: #111827;
+  --bg: #ffffff;
+  --card-bg: #f9fafb;
+  --input-bg: #f3f4f6;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+/* HEADER & NAVIGATION */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 8%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  gap: 20px;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.logo span {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.nav-link {
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* SEARCH BAR - RE-ADDED */
+.search-container {
+  flex: 0 1 400px;
+  position: relative;
+}
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  background: var(--input-bg);
+  outline: none;
+  font-family: inherit;
+}
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.action-icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;
+}
