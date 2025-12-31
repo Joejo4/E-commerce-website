@@ -14,9 +14,11 @@
 
       <nav class="nav-links">
         <span class="nav-link" onclick="switchView('home-view')">Home</span>
-        <span class="nav-link" onclick="switchView('about-view')">About</span>
+        <span class="nav-link" onclick="switchView('about-view')"
+          ><a href="about.html">About</a></span
+        >
         <span class="nav-link" onclick="switchView('contact-view')"
-          >Contact</span
+          ><a href="contact.html">Contact</a></span
         >
       </nav>
 
@@ -31,7 +33,7 @@
           onkeyup="handleSearch()"
         />
       </div>
-
+      <!--
       <div class="nav-actions">
         <div class="action-icon" onclick="switchView('auth-view')">
           <i class="fa-regular fa-user"></i>
@@ -40,106 +42,128 @@
           <i class="fa-solid fa-bag-shopping"></i>
           <span class="badge" id="cartBadge">0</span>
         </div>
-      </div>
+      </div>>-->
     </header>
 
     <!-- 1. HOME VIEW -->
     <section id="home-view" class="view-section active">
-      <h2 style="margin-bottom: 2rem; font-size: 2rem">Discover Delicious</h2>
-      <div class="product-grid" id="productGrid">
-        <div class="product-card">
-          <img src="/Images/Berry.jpg" alt="" />
-        </div>
-        <p>Berry</p>
+      <div class="dis">
+        <h2>Discover Delicious</h2>
       </div>
-      <div class="product-grid" id="productGrid">
-        <div class="product-card">
-          <img src="/Images/Burger.jpg" alt="" />
+      <div class="product-grid">
+        <!-- product 1 -->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img src="/Images/Berry.jpg" alt="berry" />
+          </div>
+          <div class="product-info">
+            <h3>Berry</h3>
+            Freshly picked assorted berries
+            <p>Price <span>$200</span></p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
         </div>
-        <p>Burger</p>
-      </div>
-      <div class="product-grid" id="productGrid">
-        <div class="product-card">
-          <img src="/Images/Chocolate.jpg" alt="" />
+        <!-- product 2 -->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img src="/Images/Burger.jpg" alt="Burger" />
+          </div>
+          <div class="product-info">
+            <h3>Burger</h3>
+            Juicy grilled beef patty with fresh lettuce and tomato
+            <p>Price <span>$200</span></p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
         </div>
-        <p>Chocolate</p>
-      </div>
-      <div class="product-grid" id="productGrid">
-        <div class="product-card">
-          <img src="/Images/Dought Nut.jpg" alt="" />
+        <!-- product 3-->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img src="/Images/Chocolate.jpg" alt="chocolate" />
+          </div>
+          <div class="product-info">
+            <h3>Chocolate</h3>
+            Delicious creamy chocolate
+            <p>Price <span>$200</span></p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
         </div>
-        <p>Dought Nut</p>
-      </div>
-      <div class="product-grid" id="productGrid">
-        <div class="product-card">
-          <img src="/Images/Pasta.jpg" alt="" />
+        <!-- product 4-->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img src="/Images/Dought Nut.jpg" alt="Dought" />
+          </div>
+          <div class="product-info">
+            <h3>Dought Nut</h3>
+            soft delicious creamy dought nut
+            <p>Price <span>$200</span></p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
         </div>
-        <p>Pasta</p>
-      </div>
-      <div class="product-grid" id="productGrid">
-        <div class="product-card">
-          <img src="/Images/Pizza.jpg" alt="" />
+        <!-- Product 5-->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img src="/Images/Pasta.jpg" alt="Pasta" />
+          </div>
+          <div class="product-info">
+            <h3>Pasta</h3>
+            Spicy and creamy pasta
+            <p>Price <span>$200</span></p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
         </div>
-        <p>Pizza</p>
-      </div>
-      <div class="product-grid" id="productGrid">
-        <div class="product-card">
-          <img src="/Images/Pounded Yam.jpg" alt="" />
+        <!-- Product 6-->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img src="/Images/Pizza.jpg" alt="Pizza" />
+          </div>
+          <div class="product-info">
+            <h3>Pizza</h3>
+            well topped pizza
+            <p>Price <span>$200</span></p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
         </div>
-        <p>Pounded Yam</p>
-      </div>
-      <div class="product-grid" id="productGrid">
-        <div class="product-card">
-          <img src="/Images/Vegetables.jpg" alt="" />
+        <!-- Product 7-->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img src="/Images/Pounded Yam.jpg" alt="Pounded yam" />
+          </div>
+          <div class="product-info">
+            <h3></h3>
+            <h3>Pounded Yam</h3>
+            Hearty vegetable soup served with Pounded yam.
+            <p>Price <span>$200</span></p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
         </div>
-        <p>Vegetables</p>
+        <!-- Product 8-->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img src="/Images/Dought Nut.jpg" alt="berry" />
+          </div>
+          <div class="product-info">
+            <h3>Dought Nut</h3>
+            soft delicious creamy dought nut
+            <p>Price <span>$200</span></p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 8-->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <img src="/Images/Vegetables.jpg" alt="vegs" />
+          </div>
+          <div class="product-info">
+            <h3>Fresh Vegetable</h3>
+            100% organic vegetables
+            <p>Price <span>$200</span></p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 2. ABOUT VIEW -->
-    <section id="about-view" class="view-section">
-      <div class="content-container">
-        <h1>Our Culinary Journey</h1>
-        <p>
-          At Gusto, we believe that great food starts with honest ingredients.
-          Founded in 2025, our mission has been to bridge the gap between
-          chef-quality dining and the convenience of home delivery.
-        </p>
-        <p style="margin-top: 1rem">
-          Every dish is prepared fresh to order, ensuring that you receive the
-          highest quality meal every single time. We partner with local farmers
-          and sustainable suppliers because we care about our community and our
-          planet.
-        </p>
-      </div>
-    </section>
-
-    <!-- 3. CONTACT VIEW -->
-    <section id="contact-view" class="view-section">
-      <div class="content-container">
-        <h1>Get In Touch</h1>
-        <p style="margin-bottom: 2rem">
-          Have a question about your order or just want to say hi? We're here to
-          help!
-        </p>
-        <div class="auth-card" style="margin: 0; max-width: 100%">
-          <div class="form-group">
-            <input type="text" placeholder="Your Name" />
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Your Email" />
-          </div>
-          <div class="form-group">
-            <textarea rows="5" placeholder="Your Message"></textarea>
-          </div>
-          <button class="primary-btn" onclick="alert('Message Sent!')">
-            Send Message
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. AUTH VIEW (Login/Signup) -->
+    <!-- 4. AUTH VIEW (Login/Signup) 
     <section id="auth-view" class="view-section">
       <div class="auth-card">
         <h2 id="authTitle" style="margin-bottom: 1.5rem; text-align: center">
@@ -166,9 +190,9 @@
           Don't have an account? Sign Up
         </p>
       </div>
-    </section>
+    </section>-->
 
-    <!-- CART SIDEBAR -->
+    <!-- CART SIDEBAR 
     <div class="overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
     <div class="cart-sidebar" id="cartSidebar">
       <h3>Your Selection</h3>
@@ -207,10 +231,10 @@
       >
         Close
       </button>
-    </div>
+    </div>-->
 
     <footer>
-      <p>&copy; 2025 Gusto Eatery. Built with Passion.</p>
+      <p>&copy; 2025 Bite-Hub Eatery.All rights reserved.</p>
     </footer>
   </body>
 </html>
