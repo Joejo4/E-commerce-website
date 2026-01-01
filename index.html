@@ -8,29 +8,23 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo" onclick="switchView('home-view')">
-        Bite-Hub<span>.</span>
-      </div>
+      <div class="logo">Bite-Hub<span>.</span></div>
 
       <nav class="nav-links">
-        <span class="nav-link" onclick="switchView('home-view')">Home</span>
-        <span class="nav-link" onclick="switchView('about-view')"
-          ><a href="about.html">About</a></span
-        >
-        <span class="nav-link" onclick="switchView('contact-view')"
-          ><a href="contact.html">Contact</a></span
-        >
+        <span class="nav-link active">Home</span>
+        <span class="nav-link"><a href="about.html">About</a></span>
+        <span class="nav-link"><a href="contact.html">Contact</a></span>
       </nav>
 
       <!-- Search Bar Restored -->
       <div class="search-container">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <!--  <i class="fa-solid fa-magnifying-glass search-icon"></i>-->
+        <img src="/icons/search.png" alt="" />
         <input
           type="text"
           class="search-input"
           id="searchInput"
           placeholder="Search for food..."
-          onkeyup="handleSearch()"
         />
       </div>
       <!--
@@ -48,7 +42,10 @@
     <!-- 1. HOME VIEW -->
     <section id="home-view" class="view-section active">
       <div class="dis">
-        <h2>Discover Delicious</h2>
+        <h2>Welcome to <span>Bite-Hub Eatery</span></h2>
+        <p>
+          Discover delicious meals and snacks prepared with care and passion.
+        </p>
       </div>
       <div class="product-grid">
         <!-- product 1 -->
