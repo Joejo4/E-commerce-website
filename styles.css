@@ -210,31 +210,18 @@ body {
   text-align: justify;
   text-align: center;
 }
+/* contact view*/
 
-footer {
+.content-container-2 h1 {
   text-align: center;
-  padding: 1.5rem 0;
-  background: #f3f4f6;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
-
-/* CART STYLES 
-.cart-item {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-  align-items: center;
+.content-container-2 p {
+  margin-bottom: 1rem;
+  text-align: center;
 }
-.cart-item img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 10px;
-}*/
-/* AUTH FORMS (Login/Signup) 
-.auth-card {
+.form {
   max-width: 400px;
   margin: 0 auto;
   padding: 2.5rem;
@@ -264,4 +251,14 @@ footer {
   font-weight: 700;
   cursor: pointer;
 }
-*/
+.primary-btn:hover {
+  background: #d62839;
+}
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: #f3f4f6;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
