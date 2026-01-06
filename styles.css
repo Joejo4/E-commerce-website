@@ -92,18 +92,7 @@ body {
   transform: translateY(-50%);
   color: #888;
 }
-/*
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-shrink: 0;
-}
-.action-icon {
-  font-size: 1.3rem;
-  cursor: pointer;
-  position: relative;
-}*/
+
 /* PAGE MANAGEMENT */
 .view-section {
   display: none;
@@ -261,4 +250,14 @@ footer {
   margin-top: 2rem;
   font-size: 0.9rem;
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    order: 3;
+    flex: 1 1 100%;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
 }
